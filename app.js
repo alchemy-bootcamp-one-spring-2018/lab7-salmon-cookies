@@ -1,19 +1,24 @@
 /* globals Fruit */
 
-let apple = new Fruit('Apple', 'red', 'sweet', 'round', 5);
-let banana = new Fruit('Banana', 'yellow', 'sweet', 'skinny', 7);
-let lime = new Fruit('Lime', 'green', 'sour', 'oval', 2);
-let strawberry = new Fruit('Strawberry', 'red', 'sweet', 'conical', 15);
-let blueberry = new Fruit('Blueberry', 'blue', 'tart', 'round', 29);
+let apple = new Fruit('apple', 'red', 'sweet', 'round', 5);
+let banana = new Fruit('banana', 'yellow', 'sweet', 'skinny', 7);
+let lime = new Fruit('lime', 'green', 'sour', 'oval', 2);
+let strawberry = new Fruit('strawberry', 'red', 'sweet', 'conical', 15);
+let blueberry = new Fruit('blueberry', 'blue', 'tart', 'round', 39);
 
 let fruitArray = [apple, banana, lime, strawberry, blueberry];
 
+let numberTotal = 0;
+let total = document.getElementById('total-row');
+let totalQuantity = document.createElement('td');
+
 for(let i = 0; i < fruitArray.length; i++) {
-    let fruitTable = document.getElementById('table-body');
+    let tableBody = document.getElementById('table-body');
+
     let fruitRow = document.createElement('tr');
 
     fruitRow.setAttribute('id', 'body-row-' + i);
-    fruitTable.appendChild(fruitRow);
+    tableBody.appendChild(fruitRow);
 
     let nameCell = document.createElement('td');
     nameCell.textContent = fruitArray[i].fruitName;
@@ -34,4 +39,9 @@ for(let i = 0; i < fruitArray.length; i++) {
     let quantityCell = document.createElement('td');
     quantityCell.textContent = fruitArray[i].fruitQuantity;
     fruitRow.appendChild(quantityCell);
+
+    numberTotal += fruitArray[i].fruitQuantity;
 }
+
+totalQuantity.textContent = numberTotal;
+total.appendChild(totalQuantity);
