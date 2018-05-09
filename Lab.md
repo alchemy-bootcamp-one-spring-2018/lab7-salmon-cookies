@@ -5,7 +5,6 @@
 In class, we learned how to refactor a group of object literals by using a constructor function and creating instances.
 
 Let's replace your object literals for the salmon cookie stands with a single constructor function that, when called with 'new', creates new instances.
-
 Your code will end up with probably 1/4 the number of lines it had before refactoring, and every line of code you don't have is one you don't need to debug!
 
 See pages 106-109 in your textbook for a constructor example... and especially focus on 108 and 109. Also refer to the demo code from class that showed how we can view a constructor function as a translation of an object literal.
