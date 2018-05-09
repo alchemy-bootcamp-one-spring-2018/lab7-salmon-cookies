@@ -1,39 +1,25 @@
-/* exported cookie, Cookie, Batch */
+/* globals Fruit */
 
-function cookie(fishType, price, cost) {
-    this.fishType = fishType;
-    this.price = price;
-    this.cost = cost;
+let grannyApple = new Fruit('Granny Smith Apple', 'green', 'tart');
+let banana = new Fruit('Banana', 'yellow', 'sweet');
+
+let fruitArray = [grannyApple, banana];
+let bodyRowId = 0;
+
+let fruitTable = document.createElement('tr');
+fruitTable.setAttribute('id', bodyRowId);
+
+for(let i in fruitArray) {
+
+    let nameCell = document.createElement('td');
+    nameCell.textContent = fruitArray[i].name;
+    fruitTable.appendChild(nameCell);
+    let colorCell = document.createElement('td');
+    colorCell.textContent = fruitArray[i].color;
+    fruitTable.appendChild(colorCell);
+    let flavorCell = document.createElement('td');
+    flavorCell.textContent = fruitArray[i].flavor;
+    fruitTable.appendChild(flavorCell);
+
+    bodyRowId++;
 }
-
-class Cookie {
-    constructor(fishType, price, cost) {
-        this.fishType = fishType;
-        this.price = price;
-        this.cost = cost;
-    }
-}
-
-class Batch {
-    constructor(batch, salmonType, cookieSize, cost, price, inventory) {
-        this.batch = batch;
-        this.salmonType = salmonType;
-        this.cookieSize = cookieSize;
-        this.cost = cost;
-        this.price = price;
-        this.inventory = inventory;
-    }
-
-    sell() {
-        return this.inventory--;
-    }
-
-    profit() {
-        return this.price - this.cost;
-    }
-}
-
-let biscuits = new Batch('1', 'Atlantic', 'L', 5, 20, 12);
-biscuits.sell();
-biscuits.price = 43;
-console.log(biscuits);
