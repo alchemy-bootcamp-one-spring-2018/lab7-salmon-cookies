@@ -13,7 +13,8 @@ class Batch{
     }
 
     sell() {
-        return this.inventory;
+        console.log(batch1.inventory);
+        return this.inventory--;
     }
 
     profit() {
@@ -21,8 +22,12 @@ class Batch{
     }
 }
 
-let batch1 = new Batch(1, '$200', '$4', '$30,000', 'Big', 10, 'Of Course');
+let batch1 = new Batch(1, 200, 4, 30000, 'Big', 10, 'Of Course');
+let batch2 = new Batch(2, 225, 4, 29544, 'Big', 10, 'Of Course');
+
+
 
 console.log('batch1', batch1);
+console.log('batch2', batch2);
 
 console.log('hey');
