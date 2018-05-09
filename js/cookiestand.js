@@ -6,9 +6,10 @@ containing an array of times with sales figures for each time slot
 */
 
 class Cookiestand {
-    constructor(location, salesPerHour1000, salesPerHour1100, salesPerHour1200, salesPerHour1300, salesPerHour1400, salesPerHour1500,salesPerHour1600, salesPerHour1700, salesPerHour1800) 
+    constructor(location, hours, salesPerHour1000, salesPerHour1100, salesPerHour1200, salesPerHour1300, salesPerHour1400, salesPerHour1500,salesPerHour1600, salesPerHour1700, salesPerHour1800) 
     {
         this.location = location;
+        this.hours = ["10:00", "11:00", "12:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00"];
         this.salesPerHour1000 = salesPerHour1000;
         this.salesPerHour1100 = salesPerHour1100;
         this.salesPerHour1200 = salesPerHour1200;
@@ -24,6 +25,13 @@ class Cookiestand {
     }
 }
 
+// Create all locations
+
 let yamhillAve = new Cookiestand('Yamhill Ave', 234, 341, 445, 543, 342, 213, 230, 660, 560);
+let couchStreet = new Cookiestand('Couch Street', 123, 221, 231, 113, 112, 145, 165, 330, 441);
+let grandAve = new Cookiestand('Grand Avenue', 312, 662, 335, 725, 432, 312, 654, 452, 123);
+let multnomahVillage = new Cookiestand('Multnomah Village', 312, 223, 123, 444, 615, 431, 237, 333, 216);
+let mainStreet = new Cookiestand('Main Street', 432, 312, 654, 452, 312, 662, 432, 312, 452);
+let lombardStreet = new Cookiestand('Lombard Street', 234, 123, 221, 231, 113, 112, 654, 291, 128);
 
 console.log(yamhillAve);
