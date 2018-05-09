@@ -1,0 +1,54 @@
+/* ANIMATIONS */
+@keyframes salmon-swim {
+    0% {
+        background-position-x: 0%;
+        background-position-y: 0%
+    } 50% {
+        background-position-x: 50%;
+        background-position-y: 5%;
+    } 100% {
+        background-position-x: 100%;
+        background-position-y: 0%;
+    }
+}
+
+/* STYLING */
+body {
+    /* background-image: url('../images/bg-water.jpg'); */
+    padding: 0;
+    margin: 0;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    animation: salmon-swim 3s linear infinite;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid white;
+    background: blue;
+    color: white;
+    margin: 10% auto;
+}
+
+#header {
+    background: rgb(0, 0, 100);
+}
+
+tr {
+    border-top: 1px solid white;
+}
+
+table td {
+    padding: 13px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#salmon {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg-salmon.png');
+    animation: salmon-swim 30s linear infinite;
+}
