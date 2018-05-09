@@ -19,9 +19,44 @@ class Batch {
         return this.price - this.cost;
     }
 
-    createTh(){
-        const head = document.createElement('th');
+    createThead(){
+        const head = document.createElement('thead');
         return head;
+    }
+
+    createTfoot(){
+        const foot = document.createElement('tfoot');
+        return foot;
+    }
+
+    createTh(){
+        const row = document.createElement('tr');
+
+        const firstData = document.createElement('th');
+        firstData.textContent = this.batch;
+        row.appendChild(firstData);
+
+        const secondData = document.createElement('th');
+        secondData.textContent = this.salmonType;
+        row.appendChild(secondData);
+
+        const thirdData = document.createElement('th');
+        thirdData.textContent = this.inventory;
+        row.appendChild(thirdData);
+
+        const fourthData = document.createElement('th');
+        fourthData.textContent = this.price;
+        row.appendChild(fourthData);
+
+        const fifthData = document.createElement('th');
+        fifthData.textContent = this.cost;
+        row.appendChild(fifthData);
+
+        const sixthData = document.createElement('th');
+        sixthData.textContent = this.cookieSize;
+        row.appendChild(sixthData);
+
+        return row;
     }
 
     createTr(){
@@ -56,6 +91,10 @@ class Batch {
 }
 const headerInfo = [
     head = new Batch('Batch', 'Type', 'Inventory', 'Price', 'Cost', 'Size')
+];
+
+const footerInfo = [
+    foot = new Batch('here', 'is', 'a', 'footer', 'to', 'test')
 ];
 
 const cookieData = [

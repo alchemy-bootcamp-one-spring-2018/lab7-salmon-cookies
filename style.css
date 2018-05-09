@@ -4,6 +4,7 @@ table th{
 
 table td{
     padding: 10px;
+    text-align: center;
 }
 
 table {
@@ -20,3 +21,4 @@ table {
 #row-1, #row-3{
     background-color: lightsteelblue
 }
+
