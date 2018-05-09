@@ -1,4 +1,5 @@
 'use strict';
+/* globals Store */
 
 
 function createHeader() {
@@ -16,8 +17,19 @@ function createHeader() {
 }
 
 function createBody() {
+    var table = document.getElementsByTagName('table')[0];
+    var tbody = document.createElement('tbody');
+    table.appendChild(tbody);
+    //document.getElementsByTagName('tbody')[0].textContent = 'This is some text';
     for(var i = 0; i < arrStores.length; i++) {
-        var first = document.querySelector();
+        arrStores[i].render();
+    }
+
+}
+
+/* function createBody() {
+    for(var i = 0; i < arrStores.length; i++) {
+        var first = document.querySelector(#fruit-list UL tag);
 
         var fruitName = fruits[i].createLi();
         first.appendChild(fruitName);
@@ -26,7 +38,8 @@ function createBody() {
         var fruitImage = (fruits[i].createImg());
         first.appendChild(fruitImage);
     }
-}
+} */
+
 
 function createFooter() {
     var table = document.getElementsByTagName('table')[0];
@@ -43,4 +56,5 @@ function createFooter() {
 }
 
 createHeader();
+createBody();
 createFooter();
