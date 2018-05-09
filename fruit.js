@@ -95,15 +95,21 @@ function createTableHead(Fruit) {
     //make a js reference to the parent element (table > thead > tr > table cell)
     const tbl = document.getElementById('fruit-table');
     const tblHead = document.createElement('thead');
-    const tblRow = document.createElement('tr');
     //tr > line x
+    for(var i = 0; i < 2; i++) {
+        const tblRow = document.createElement('tr');
 
-    //create the child element we want to add and save as a var
-    //cells > line y
-    let tblCell = document.createElement('th');
-    //give child content (content can be text)
-    tblCell.textContent = Fruit.name;
-    //append child to the parent
+        //create the child element we want to add and save as a var
+        //cells > line y
+        for(var j = 0; j < 2; j++) {
+            let tblCell = document.createElement('th');
+            //give child content (content can be text)
+            let cellText = document.createTextNode(Fruit.name);
+            tblCell.appendChild(Fruit.name);
+            //append child to the parent
+            tblRow.appendChild(tblCell);
+        }
+    }
 }
 
 //function to push to tbody
