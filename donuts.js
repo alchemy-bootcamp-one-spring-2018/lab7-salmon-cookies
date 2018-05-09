@@ -48,8 +48,8 @@ const maple = new Donut (
 
 const donutList = [
     cinnamon,
-    blueberry,
-    chocolate,
-    cointreau,
-    maple
+    // blueberry,
+    // chocolate,
+    // cointreau,
+    // maple
 ];
