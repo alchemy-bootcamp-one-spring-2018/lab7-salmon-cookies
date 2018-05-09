@@ -46,7 +46,7 @@ const maple = new Donut (
     0
 );
 
-donutList = [
+const donutList = [
     cinnamon,
     blueberry,
     chocolate,
