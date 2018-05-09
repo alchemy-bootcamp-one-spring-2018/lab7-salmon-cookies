@@ -21,6 +21,7 @@ class Batch {
 
     createTh(){
         const head = document.createElement('th');
+        return head;
     }
 
     createTr(){
@@ -53,6 +54,9 @@ class Batch {
         return row;
     }
 }
+const headerInfo = [
+    head = new Batch('Batch', 'Type', 'Inventory', 'Price', 'Cost', 'Size')
+];
 
 const cookieData = [
     firstBatch = new Batch('1', 'Pacific', 24, 20.00, 7.50, 'Small'),
