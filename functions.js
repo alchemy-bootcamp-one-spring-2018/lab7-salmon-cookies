@@ -1,11 +1,12 @@
 /* exported storeList createHeader createFooter*/
 
-//adapted from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 // gets a random integer between 0 and 60.  Used to create dummy data (number of boxes sold).
+//adapted from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt() {
     return Math.floor(Math.random() * Math.floor(60));
 }
 
+// generic function to create a table row.  Used by class and functions below.
 function createTableRow(col1value, col2value, col3value, col4value) {
     var newRow = document.createElement('tr');
     var newCell1 = document.createElement('th');
