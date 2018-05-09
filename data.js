@@ -1,3 +1,4 @@
+/* exported cookieData */
 
 class Batch {
 
@@ -19,9 +20,21 @@ class Batch {
     }
 
     createTd(){
-        const data = document.createElement('td');
-        data.textContent = this.inventory;
-        return data;
+        const row = document.createElement('tr');
+
+        const firstData = document.createElement('td');
+        firstData.textContent = this.batch;
+        row.appendChild(firstData);
+
+        const secondData = document.createElement('td');
+        secondData.textContent = this.salmonType;
+        row.appendChild(secondData);
+
+        const thirdData = document.createElement('td');
+        thirdData.textContent = this.inventory;
+        row.appendChild(thirdData);
+
+        return row;
     }
 }
 
