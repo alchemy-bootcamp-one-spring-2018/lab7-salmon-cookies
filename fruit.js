@@ -1,9 +1,11 @@
 /* exported Fruit */
 
 class Fruit {
-    constructor(name, color, flavor) {
-        this.name = name;
-        this.color = color;
-        this.flavor = flavor;
+    constructor(fruitName, fruitColor, fruitFlavor, fruitShape, fruitQuantity) {
+        this.fruitName = fruitName;
+        this.fruitColor = fruitColor;
+        this.fruitFlavor = fruitFlavor;
+        this.fruitShape = fruitShape;
+        this.fruitQuantity = fruitQuantity;
     }
 }
