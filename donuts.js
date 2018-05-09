@@ -3,9 +3,9 @@
 
 
 class Donut {
-    constructor(name, seasonal, cost, inventory) {
+    constructor(name, available, cost, inventory) {
         this.name = name;
-        this.seasonal = seasonal;
+        this.available = available;
         this.cost = cost;
         this.inventory = inventory;
     }
@@ -13,43 +13,43 @@ class Donut {
 
 const cinnamon = new Donut (
     'Cinnamon and Sugar',
-    false,
+    true,
     3.25,
     10
 );
 
 const blueberry = new Donut (
     'Blueberry Bourbon Basil',
-    false,
+    true,
     4.00,
     12
 );
 
 const chocolate = new Donut (
     'Chocolate Almond Ganache',
-    false,
+    true,
     3.75,
     1
 );
 
 const cointreau = new Donut (
     'Cointreau Creme Brule',
-    true,
+    false,
     4.25,
     14
 );
 
 const maple = new Donut (
     'Real Maple Bacon',
-    true,
+    false,
     2.75,
     0
 );
 
 const donutList = [
     cinnamon,
-    // blueberry,
-    // chocolate,
-    // cointreau,
-    // maple
+    blueberry,
+    chocolate,
+    cointreau,
+    maple
 ];
