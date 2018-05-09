@@ -91,25 +91,58 @@ console.log(fruits.length);
 //     ul.appendChild(li);
 // }
 
+// function createTableHead(Fruit) {
+//     //make a js reference to the parent element (table > thead > tr > table cell)
+//     const table = document.getElementById('fruit-table');
+//     const thead = document.createElement('thead');
+
+//     //tr > line x
+//     let tr = [];
+//     for(var i = 0; i < 2; i++) {
+//         tr[i] = document.createElement('tr');
+
+//         //create the child element we want to add and save as a var
+//         //cells > line y
+//         let th = [];
+//         for(var j = 0; j < 2; j++) {
+//             th[j] = document.createElement('th');
+//             //give child content (content can be text)
+//             let cellText = document.createTextNode(fruits[j]);
+//             th[j].appendChild(fruits[j]);
+//             //append child to the parent
+//             tr[i].appendChild(th[j]);
+//         }
+//         //append child to the parent tr > thead
+//         thead.appendChild(tr[i]);
+//     }
+//     //append child to the parent thead > table
+//     table.appendChild(thead);
+// }
+
 function createTableHead(Fruit) {
     //make a js reference to the parent element (table > thead > tr > table cell)
-    const tbl = document.getElementById('fruit-table');
-    const tblHead = document.createElement('thead');
+    const table = document.getElementById('fruit-table');
+    const thead = document.createElement('thead');
+
     //tr > line x
+    let tr = [];
     for(var i = 0; i < 2; i++) {
-        const tblRow = document.createElement('tr');
+        tr[i] = document.createElement('tr');
 
         //create the child element we want to add and save as a var
         //cells > line y
-        for(var j = 0; j < 2; j++) {
-            let tblCell = document.createElement('th');
-            //give child content (content can be text)
-            let cellText = document.createTextNode(Fruit.name);
-            tblCell.appendChild(Fruit.name);
-            //append child to the parent
-            tblRow.appendChild(tblCell);
-        }
+        
+        let th = document.createElement('th');
+        //give child content (content can be text)
+        let cellText = document.createTextNode(Text);
+        th.appendChild(Text);
+        //append child to the parent
+        tr.appendChild(tr);    
+        //append child to the parent tr > thead
+        thead.appendChild(tr[i]);
     }
+    //append child to the parent thead > table
+    table.appendChild(thead);
 }
 
 //function to push to tbody
