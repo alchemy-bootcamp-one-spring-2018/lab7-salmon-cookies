@@ -1,5 +1,5 @@
 'use strict';
-/* exported Batch, batch1, batch2, batch3, batch4, batch5 */
+/* exported Batch, batch1, batch2, batch3, batch4, batch5, tableArray, createTableData*/
 
 class Batch {
     constructor(batch, salmonType, size, inventory, cost, batchPrice, unitPrice) {
@@ -40,4 +40,8 @@ console.log ('batch4', batch4);
 
 let batch5 = new Batch (5, 'Pacific', 'S', 12, 10, 20, 2.0);
 console.log ('batch5', batch5);
+
+var tableArray = [batch1, batch2, batch3, batch4, batch5];
+
+const createTableData = document.createElement('tr');
 
