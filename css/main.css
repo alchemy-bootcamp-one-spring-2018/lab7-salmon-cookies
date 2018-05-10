@@ -29,7 +29,9 @@ body {
 }
 
 input {
-    width: 87px
+    width: 87px;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 table {

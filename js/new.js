@@ -1,4 +1,4 @@
-let inputsToAdd = ['<input id="txt-0" type="text">', '<input id="txt-1" type="text">', '<input id="txt-2" type="text">', '<input id="txt-3" type="text">', '<input id="txt-4" type="text">', '<input type="submit" onclick="addRow()">']
+let inputsToAdd = ['<input id="txt-0" type="text">', '<input id="txt-1" type="text">', '<input id="txt-2" type="number">', '<input id="txt-3" type="number">', '<input id="txt-4" type="number">', '<input type="submit" onclick="addRow()">']
 render(inputsToAdd, 'foot', 'footer');
 
 function addRow() {
@@ -8,7 +8,7 @@ function addRow() {
         newArray.push(document.getElementById('txt-' + i).value);
     }
     let tempCookie = new Cookie(newArray[0], newArray[1], newArray[2], newArray[3], newArray[4]);
+    console.log(tempCookie);
     cookieArray.push(tempCookie);
-    render(newArray, 'body');
     update();
 }
