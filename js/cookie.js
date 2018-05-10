@@ -10,7 +10,7 @@ class Batch {
     }
 }
 
-let batch1 = new Batch(1, "pacific", "M", 10.00, 20.00);
+let batch1 = new Batch(1, "Pacific", "M", 10.00, 20.00);
 console.log('batch1' , batch1);
 
 let batch2 = new Batch(2, "Alaskan", "S", 20.00, 40.00);
