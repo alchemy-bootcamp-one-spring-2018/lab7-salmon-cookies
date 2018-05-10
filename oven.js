@@ -1,6 +1,7 @@
 /* exported Cookie chocolateCookie oatmealCookie bananaCookie cookieArray */
 'use strict';
 
+//object constructor using the class syntax
 class Cookie {
     constructor(name, type, taste, price, cost, inventory) {
         this.name = name;

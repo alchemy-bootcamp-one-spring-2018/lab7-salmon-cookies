@@ -2,6 +2,8 @@
 /* globals cookieArray */
 'use strict';
 
+//inserts a row in the tbody for each item in array and gives it a unique ID
+//then it populates the row with data by calling on the functions below
 function insertRow() {
     var parent = document.getElementById('table-body');
     for(var i = 0; i < cookieArray.length; i++) {
@@ -20,6 +22,7 @@ function insertRow() {
 
 insertRow();
 
+//for retrieving data from objects in cookieArry
 function insertName(i) {
     var parent = document.getElementById('row-' + i);
     var child = document.createElement('td');
