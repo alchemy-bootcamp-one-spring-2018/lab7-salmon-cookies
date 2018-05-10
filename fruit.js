@@ -2,74 +2,18 @@
 /*  */
 'use strict';
 
-/* <table>
-        <thead>
-            <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Color</th>
-                <th scope="col">standLocation</th>
-                <th scope="col">Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tfoot>
-    </table> */
-
-// let fruits = [
-//     {
-//         fruitImg: 'images/1.png',
-//         fruitName: 'Oranges',
-//         fruitPrice: '$2',
-//         fruitColor: 'orange',
-//     },
-//     {
-//         fruitImg: 'images/2.png',
-//         fruitName: 'Bananas',
-//         fruitPrice: '$1',
-//         fruitColor: 'yellow',
-//     },
-//     {
-//         fruitImg: 'images/3.png',
-//         fruitName: 'Strawberries',
-//         fruitPrice: '$2',
-//         fruitColor: 'red',
-//     }
-// ];
-
 // Constructor function → create fruit instances → array of objects → loop through array
 
-//constructor fruit function
+//constructor function - Fruit class
 class Fruit {
-    constructor(name, color, standLocation, price) {
+    constructor(name, color, standLocation, price, createTableHead, renderApple) {
         this.name = name;
         this.color = color;
         this.standLocation = standLocation;
         this.price = price;
     }
 
-    createTableHead() {
+    this.createTableHead = function() {
         const table = document.querySelector('#fruit-table');
         const thead = document.createElement('thead');
         console.log(table, thead);
@@ -83,72 +27,74 @@ class Fruit {
             thead.appendChild(tr);
             tr.appendChild(th);
         }
-    }
+    };
 
-    //render fruit rows
-    renderApple() {
-        const table = document.querySelector('#fruit-table');
-        const tbody = document.createElement('tbody');
+    // //render fruit rows
+    // renderApple() {
+    //     const table = document.querySelector('#fruit-table');
+    //     const tbody = document.createElement('tbody');
 
-        const tr = document.createElement('tr');
-        // var appleArray = [apple];
-        for(var i = 0; i < 5; i++) {
-            let th = document.createElement('th');
-            th.textContent = fruits[0];
-            table.appendChild(tbody);
-            tbody.appendChild(tr);
-            tr.appendChild(th);
-        }
-    }
+    //     const tr = document.createElement('tr');
+    //     for(var i in apple) {
+    //         let td = document.createElement('td');
+    //         td.textContent = apple[i];
+    //         table.appendChild(tbody);
+    //         tbody.appendChild(tr);
+    //         tr.appendChild(td);
+    //     }
+    // };
 
-    renderOrange() {
-        const table = document.querySelector('#fruit-table');
-        const tbody = document.createElement('tbody');
+    // renderOrange(fruits) {
+    //     const table = document.querySelector('#fruit-table');
+    //     const tbody = document.createElement('tbody');
 
-        const tr = document.createElement('tr');
-        for(var i = 0; i < 5; i++) {
-            let th = document.createElement('th');
-            th.textContent = fruits[1];
-            table.appendChild(tbody);
-            tbody.appendChild(tr);
-            tr.appendChild(th);
-        }
-    }
+    //     const tr = document.createElement('tr');
+    //     for(var apple in fruits) {
+    //         let th = document.createElement('th');
+    //         th.textContent = fruits[apple];
+    //         table.appendChild(tbody);
+    //         tbody.appendChild(tr);
+    //         tr.appendChild(th);
+    //     }
+    // }
 
-    renderAvocado() {
-        const table = document.querySelector('#fruit-table');
-        const tbody = document.createElement('tbody');
+    // renderAvocado() {
+    //     const table = document.querySelector('#fruit-table');
+    //     const tbody = document.createElement('tbody');
 
-        const tr = document.createElement('tr');
-        for(var i = 0; i < 5; i++) {
-            let th = document.createElement('th');
-            th.textContent = fruits[2];
-            table.appendChild(tbody);
-            tbody.appendChild(tr);
-            tr.appendChild(th);
-        }
-    }
+    //     const tr = document.createElement('tr');
+    //     avocado[this.name];
+    //     for(var i = 0; i < 5; i++) {
+    //         let th = document.createElement('th');
+    //         th.textContent = avocado[i];
+    //         table.appendChild(tbody);
+    //         tbody.appendChild(tr);
+    //         tr.appendChild(th);
+    //     }
+    // }
 
-    createTableFooter() {
-        const table = document.querySelector('#fruit-table');
-        const tfoot = document.createElement('tfoot');
-        console.log(table, tfoot);
+    // createTableFooter() {
+    //     const table = document.querySelector('#fruit-table');
+    //     const tfoot = document.createElement('tfoot');
+    //     console.log(table, tfoot);
 
-        const tr = document.createElement('tr');
-        var footerRow = ['Total:', '3 Names', '3 Colors', '3 Stand Locations', 'Total Price'];
-        for(var i = 0; i < 5; i++) {
-            let th = document.createElement('th');
-            th.textContent = footerRow[i];
-            table.appendChild(tfoot);
-            tfoot.appendChild(tr);
-            tr.appendChild(th);
-        }
-    }
+    //     const tr = document.createElement('tr');
+    //     var footerRow = ['Total:', '3 Names', '3 Colors', '3 Stand Locations', 'Total Price'];
+    //     for(var i = 0; i < 5; i++) {
+    //         let th = document.createElement('th');
+    //         th.textContent = footerRow[i];
+    //         table.appendChild(tfoot);
+    //         tfoot.appendChild(tr);
+    //         tr.appendChild(th);
+    //     }
+    // }
 }
 
 //instances of fruit object
 var apple = new Fruit('Granny Smith', 'green', 'Portland', 3);
-console.log(apple.createTableHead());
+console.log('apple object');
+createTableHead();
+// apple.renderApple(apple);
 var orange = new Fruit('Navel', 'orange', 'Eugene', 2);
 var avocado = new Fruit('Hass', 'green', 'Corvallis', 4);
 
@@ -157,18 +103,6 @@ var avocado = new Fruit('Hass', 'green', 'Corvallis', 4);
 var fruits = [apple, orange, avocado]; //use for creating tr in table body?
 // console.log(fruits);
 
-//function to push to thead
-// function createLi(fruits) {
-//     //make a js reference to the parent element
-//     const ul = document.getElementById('fruits-list');
-//     //create the child element we want to add and save as a var
-//     let li = document.createElement('li');
-//     //give child content (content can be text)
-//     li.textContent = fruits.fruitName + ' are ' + fruits.fruitPrice;
-//     li.style.color = fruits.fruitColor;
-//     //append child to the parent
-//     ul.appendChild(li);
-// }
 
 // function createTableHead(Fruit) {
 //     //make a js reference to the parent element (table > thead > tr > table cell)
@@ -198,31 +132,32 @@ var fruits = [apple, orange, avocado]; //use for creating tr in table body?
 //     table.appendChild(thead);
 // }
 
-function createTablesHead(Fruit) {
-    //make a js reference to the parent element (table > thead > tr > table cell)
-    const table = document.getElementById('fruit-table');
-    const thead = document.createElement('thead');
+// function createTablesHead(Fruit) {
+//     //make a js reference to the parent element (table > thead > tr > table cell)
+//     const table = document.getElementById('fruit-table');
+//     const thead = document.createElement('thead');
 
-    //tr > line x
-    let tr = [];
-    for(var i = 0; i < 2; i++) {
-        tr[i] = document.createElement('tr');
+//     //tr > line x
+//     let tr = [];
+//     for(var i = 0; i < 2; i++) {
+//         tr[i] = document.createElement('tr');
 
-        //create the child element we want to add and save as a var
-        //cells > line y
+//         //create the child element we want to add and save as a var
+//         //cells > line y
         
-        let th = document.createElement('th');
-        //give child content (content can be text)
-        let cellText = document.createTextNode(Text);
-        th.appendChild(Text);
-        //append child to the parent
-        tr.appendChild(tr);    
-        //append child to the parent tr > thead
-        thead.appendChild(tr[i]);
-    }
-    //append child to the parent thead > table
-    table.appendChild(thead);
-}
+//         let th = document.createElement('th');
+//         //give child content (content can be text)
+//         let cellText = document.createTextNode(Text);
+//         th.appendChild(Text);
+//         //append child to the parent
+//         tr.appendChild(tr);    
+//         //append child to the parent tr > thead
+//         thead.appendChild(tr[i]);
+//     }
+//     //append child to the parent thead > table
+//     table.appendChild(thead);
+// }
+
 /* test createTableHead function */
 // createTableHead() {
 //     console.log('sell');
