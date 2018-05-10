@@ -17,8 +17,26 @@ div {
 
 #coffee-table {
     background-color: black;
+    opacity: 0.70;
     color: lightgoldenrodyellow;
     font-size: 25px;
+    border-collapse: collapse;
+}
+
+thead {
+    border: solid;
+}
+
+th {
+    padding: 5px;
+}
+
+tbody {
+    text-transform: capitalize;
+}
+td {
+    border: solid;
+    padding: 5px;
 }
 
 #footer {

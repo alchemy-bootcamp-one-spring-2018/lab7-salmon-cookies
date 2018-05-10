@@ -29,11 +29,11 @@ let tb = document.querySelector('tbody');
 
 for(let j = 0; j < coffeeList.length; j++) {
   
-    td[0].textContent = coffeeList[j].name.toUpperCase();
+    td[0].textContent = coffeeList[j].name;
     td[1].textContent = coffeeList[j].temp;
     td[2].textContent = coffeeList[j].size;
-    td[3].textContent = coffeeList[j].price;
-    td[4].textContent = coffeeList[j].calories;
+    td[3].textContent = coffeeList[j].calories;
+    td[4].textContent = coffeeList[j].price;
     
     let clone = document.importNode(menuTemplate.content, true);
     tb.appendChild(clone);
