@@ -1,37 +1,41 @@
 'use strict';
-/* globals Store arrHeaders */
+/* globals Store */
 
-
+/*
+Function create and appends 'thead', inserts one row there.
+Remaining 'for' loop creates variables[i], inserts cells[i]
+and modifies textContent to input header data from arrHeaders[i]
+*/
 function createHeader() {
     var table = document.getElementsByTagName('table')[0];
     var thead = document.createElement('thead');
     table.appendChild(thead);
-    //document.getElementsByTagName('thead')[0].textContent = 'This is some text';
+    
+    var thead = document.getElementsByTagName('thead')[0];
+    var row = thead.insertRow(0);
+    
+    var cell = [];
+    for(var i = 0; i < arrHeaders.length; i++) {
+        cell[i];
+        console.log();
+        cell[i] = row.insertCell(i);
+        cell[i].textContent = arrHeaders[i];
+    }
 }
 
-function getTitles() {
-        var thead = document.getElementsByTagName('thead')[0];
-        var row = thead.insertRow(0);
-
-        var cell = [];
-        for(var i = 0; i < arrHeaders.length; i++) {
-            cell[i];
-            console.log();
-            cell[i] = row.insertCell(i);
-            cell[i].textContent = arrHeaders[i];
-        }
-}
-
+// Function creates and appends 'tbody' then runs render()
+// render() loops to create all table rows and table data
 function createBody() {
     var table = document.getElementsByTagName('table')[0];
     var tbody = document.createElement('tbody');
     table.appendChild(tbody);
-    //document.getElementsByTagName('tbody')[0].textContent = 'This is some text';
+    
     for(var i = 0; i < arrStores.length; i++) {
         arrStores[i].render();
     }
 }
 
+// Function finds table, creates 'tfoot', 'tr', 'td' and appends
 function createFooter() {
     var table = document.getElementsByTagName('table')[0];
 
@@ -47,6 +51,5 @@ function createFooter() {
 }
 
 createHeader();
-getTitles();
 createBody();
 createFooter();
