@@ -1,12 +1,14 @@
 console.log('cookiestand.js is loading');
 
+/* globals allLocations */
+
 /* 
 object constructor to build array of cookie stand locations
 containing an array of times with sales figures for each time slot
 */
 
 class Cookiestand {
-    constructor(location, hours, salesPerHour1000, salesPerHour1100, salesPerHour1200, salesPerHour1300, salesPerHour1400, salesPerHour1500,salesPerHour1600, salesPerHour1700, salesPerHour1800)
+    constructor(location, hours, salesPerHour1000, salesPerHour1100, salesPerHour1200, salesPerHour1300, salesPerHour1400, salesPerHour1500, salesPerHour1600, salesPerHour1700, salesPerHour1800)
     {
         this.location = location;
         this.hours = ['10:00', '11:00', '12:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00'];
@@ -39,4 +41,6 @@ let lombardStreet = new Cookiestand('Lombard Street', '', 234, 123, 221, 231, 11
 
 // place all location objects into and array
 
-var allLocations = [yamhillAve, couchStreet, grandAve, multnomahVillage, mainStreet, lombardStreet];
+//*****NOTE TO TA****** I can't figure out why I can't get this linter error to disappear
+
+allLocations = [yamhillAve, couchStreet, grandAve, multnomahVillage, mainStreet, lombardStreet];
