@@ -74,7 +74,6 @@ class Fruit {
         const thead = document.createElement('thead');
         console.log(table, thead);
 
-        
         const tr = document.createElement('tr');
         var headerRow = ['', 'Name', 'Color', 'Stand Location', 'Price'];
         for(var i = 0; i < 5; i++) {
@@ -86,8 +85,64 @@ class Fruit {
         }
     }
 
-    renderFruit() {
-        
+    //render fruit rows
+    renderApple() {
+        const table = document.querySelector('#fruit-table');
+        const tbody = document.createElement('tbody');
+
+        const tr = document.createElement('tr');
+        // var appleArray = [apple];
+        for(var i = 0; i < 5; i++) {
+            let th = document.createElement('th');
+            th.textContent = fruits[0];
+            table.appendChild(tbody);
+            tbody.appendChild(tr);
+            tr.appendChild(th);
+        }
+    }
+
+    renderOrange() {
+        const table = document.querySelector('#fruit-table');
+        const tbody = document.createElement('tbody');
+
+        const tr = document.createElement('tr');
+        for(var i = 0; i < 5; i++) {
+            let th = document.createElement('th');
+            th.textContent = fruits[1];
+            table.appendChild(tbody);
+            tbody.appendChild(tr);
+            tr.appendChild(th);
+        }
+    }
+
+    renderAvocado() {
+        const table = document.querySelector('#fruit-table');
+        const tbody = document.createElement('tbody');
+
+        const tr = document.createElement('tr');
+        for(var i = 0; i < 5; i++) {
+            let th = document.createElement('th');
+            th.textContent = fruits[2];
+            table.appendChild(tbody);
+            tbody.appendChild(tr);
+            tr.appendChild(th);
+        }
+    }
+
+    createTableFooter() {
+        const table = document.querySelector('#fruit-table');
+        const tfoot = document.createElement('tfoot');
+        console.log(table, tfoot);
+
+        const tr = document.createElement('tr');
+        var footerRow = ['Total:', '3 Names', '3 Colors', '3 Stand Locations', 'Total Price'];
+        for(var i = 0; i < 5; i++) {
+            let th = document.createElement('th');
+            th.textContent = footerRow[i];
+            table.appendChild(tfoot);
+            tfoot.appendChild(tr);
+            tr.appendChild(th);
+        }
     }
 }
 
@@ -100,7 +155,7 @@ var avocado = new Fruit('Hass', 'green', 'Corvallis', 4);
 //array of fruits
 //loop through fruits --> in app.js
 var fruits = [apple, orange, avocado]; //use for creating tr in table body?
-console.log(fruits);
+// console.log(fruits);
 
 //function to push to thead
 // function createLi(fruits) {
@@ -182,6 +237,3 @@ function createTablesHead(Fruit) {
 //     thead.appendChild(tr);
 //     tr.appendChild(th);
 // }
-
-//function to push to tbody
-//function to push to tfooter
