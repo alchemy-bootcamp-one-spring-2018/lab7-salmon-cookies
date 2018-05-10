@@ -22,16 +22,32 @@ body {
     animation: salmon-swim 3s linear infinite;
 }
 
+#container-main {
+    display: flex;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+input {
+    width: 87px
+}
+
 table {
     border-collapse: collapse;
     border: 1px solid white;
     background: blue;
     color: white;
-    margin: 10% auto;
 }
 
-#header {
+#header, #body-total {
     background: rgb(0, 0, 100);
+    font-weight: bold;
+}
+
+#footer {
+    background: black;
+    color: white;
+    font-weight: bold;
 }
 
 tr {
