@@ -28,17 +28,11 @@ var inventoryTotal = 0;
         inventoryTotal += arrStores[i].inventory;
     }
 
-var arrFooters = [
-    ,
-    ,
-    'Total:',
-    '$' + costTotal,
-    '$' + priceTotal,
-    inventoryTotal
-];
+var arrFooters = [ , , 'Total:', '$' + costTotal, '$' + priceTotal, inventoryTotal];
+
 
 /*
-Function create and appends 'thead', inserts one row there.
+Creates and appends 'thead', inserts one row there.
 Remaining 'for' loop creates variables[i], inserts cells[i]
 and modifies textContent to input header data from arrHeaders[i]
 */
@@ -53,13 +47,12 @@ function createHeader() {
     var cell = [];
     for(var i = 0; i < arrHeaders.length; i++) {
         cell[i];
-        console.log();
         cell[i] = row.insertCell(i);
         cell[i].textContent = arrHeaders[i];
     }
 }
 
-// Function creates and appends 'tbody' then runs render()
+// Creates and appends 'tbody' then runs render();
 // render() loops to create all table rows and table data
 function createBody() {
     var table = document.getElementsByTagName('table')[0];
@@ -86,6 +79,7 @@ function createFooter() {
     }
 }
 
+// Call functions for header, body, and footer data
 createHeader();
 createBody();
 createFooter();
