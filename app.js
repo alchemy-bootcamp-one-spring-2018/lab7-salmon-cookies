@@ -2,8 +2,19 @@
 /* exported App */
 
 'use strict';
+
 function createHeader(name) {
-    const 
+    const parent = document.querySelector('#donut-header>tr');
+    const child = document.createElement('th');
+    child.textContent = name;
+    parent.appendChild(child);
+}
+
+function createFooter(name) {
+    const parent = document.querySelector('#donut-footer>tr');
+    const child = document.createElement('td');
+    child.textContent = name;
+    parent.appendChild(child);
 }
 class App {
     constructor(donuts) {
@@ -14,8 +25,12 @@ class App {
         const header = document.querySelector('#donut-header');
         const headerRow = document.createElement('tr');
         header.appendChild(headerRow);
-        crearteHeader('Name')
-
+        createHeader('');
+        createHeader('Name');
+        createHeader('Available');
+        createHeader('Calories');
+        createHeader('Cost');
+        createHeader('Inventory');
         const template = document.querySelector('#donut-row');
         const td = template.content.querySelectorAll('td');
         const tbody = document.querySelector('tbody');
@@ -30,5 +45,8 @@ class App {
             const clone = document.importNode(template.content, true);
             tbody.appendChild(clone);
         }
+
+        const footer = document.querySelector('#donut-footer');
+        // const footerRow = 
     }
 }
