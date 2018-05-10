@@ -1,5 +1,5 @@
 /* exported Cookie chocolateCookie oatmealCookie bananaCookie */
-/* globals cookieArray */
+/* globals cookieArray headerArray */
 'use strict';
 
 //inserts a row in the tbody for each item in array and gives it a unique ID
@@ -20,9 +20,18 @@ function insertRow() {
     }
 }
 
-insertRow();
+//for inserting header using their property keys
+function insertHeader() {
+    var parent = document.getElementById('table-head');
+    for(var i = 0; i < headerArray.length; i++){
+        var child = document.createElement('th');
+        parent.appendChild(child);
+        child.textContent = headerArray[i];
+    }
 
-//for retrieving data from objects in cookieArry
+}
+
+//for retrieving data from objects in cookieArray
 function insertName(i) {
     var parent = document.getElementById('row-' + i);
     var child = document.createElement('td');
@@ -82,3 +91,5 @@ function footerData() {
 }
 
 insertFooter();
+insertRow();
+insertHeader();

@@ -1,4 +1,4 @@
-/* exported Cookie chocolateCookie oatmealCookie bananaCookie cookieArray */
+/* exported Cookie chocolateCookie oatmealCookie bananaCookie cookieArray headerArray */
 'use strict';
 
 //object constructor using the class syntax
@@ -35,3 +35,7 @@ var oatmealCookie = new Cookie('Oatmeal', 'chewy', 'sweet', 3.5, .5, 24);
 var bananaCookie = new Cookie('Banana', 'ice cream', 'sweet', 6, 2, 16);
 
 var cookieArray = [salmonCookie, chocolateCookie, oatmealCookie, bananaCookie];
+
+var headerArray = Object.getOwnPropertyNames(salmonCookie);
+console.log(headerArray);
+
