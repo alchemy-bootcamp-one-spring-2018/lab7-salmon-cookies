@@ -16,6 +16,15 @@ function createFooter(name) {
     child.textContent = name;
     parent.appendChild(child);
 }
+
+function totalInventory() {
+    let total = 0;
+    for(let i in donutList) {
+        total += donutList[i].inventory;
+    }
+    return total;
+}
+
 class App {
     constructor(donuts) {
         this.donuts = donuts;
@@ -47,6 +56,13 @@ class App {
         }
 
         const footer = document.querySelector('#donut-footer');
-        // const footerRow = 
+        const footerRow = document.createElement('tr');
+        footer.appendChild(footerRow);
+        createFooter('');
+        createFooter('Total');
+        createFooter('');
+        createFooter('');
+        createFooter('');
+        createFooter(totalInventory());
     }
 }
