@@ -58,7 +58,7 @@ t = document.querySelector('#footer-row');
 td = t.content.querySelectorAll("td");
 
 var createFooterRow = function(){
-    td[0].textContent = '';
+    td[0].textContent = 'TOTALS';
     td[1].textContent = salesByLocation1000;
     td[2].textContent = salesByLocation1100;
     td[3].textContent = salesByLocation1200;

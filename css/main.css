@@ -1,9 +1,18 @@
-h1 {
-    color: red;
-}
 
 table {
     border-collapse: collapse
+}
+
+thead td {
+    background-color: #FFF;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: rgb(160, 247, 186)
+}
+tr:nth-child(odd) {
+    background: #FFF
 }
 
 td {
