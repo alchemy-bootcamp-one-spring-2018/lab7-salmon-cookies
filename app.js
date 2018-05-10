@@ -8,10 +8,9 @@ let totalSaturday = 0;
 let totalSunday = 0;
 
 // write elements in storeList to table
-const tableBodyEl = document.getElementById('store-list');
+const tableBodyElement = document.getElementById('store-list');
 for(let i = 0; i < storeList.length; i++) {
-    let newRow = storeList[i].render();
-    tableBodyEl.appendChild(newRow);
+    storeList[i].render(tableBodyElement);
     totalFriday += storeList[i].boxesFriday;
     totalSaturday += storeList[i].boxesSaturday;
     totalSunday += storeList[i].boxesSunday;
