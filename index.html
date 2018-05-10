@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>COFFEE MENU </h1>
-    <table>
+    <h1>Procaffeinating Coffee Shop </h1>
+    
+    <div>
+    <table id="coffee-table">
         <thead>
             <tr id="table-header">
               <!--app.js inserts <th> elements + content here-->
@@ -29,8 +31,13 @@
             </tr>
         </template>
 
-    </table>
+        <tfoot>
+            <tr id="table-footer"> </tr>
+            <!--app.js inserts <th> elements + content here-->
+        </tfoot>
 
+    </table>
+    </div>
 
     <script src="objects.js"></script>
     <script src="app.js"></script>

@@ -1,14 +1,27 @@
 /* globals coffeeList */
 'use strict';
 
-// inserting table headers using the name of each coffee item
-/*
-for(let i = 0; i < coffeeList.length; i++) {
+// declaring two functions to insert a table header and footer for my coffee menu
+function header() {
     const coffeeTable = document.querySelector('#table-header');
-    const tableHeaders = document.createElement('th');
-    coffeeTable.appendChild(tableHeaders);
-    tableHeaders.textContent = coffeeList[i].name.toUpperCase();
-} */
+    let tableHeader = document.createElement('th');
+    coffeeTable.appendChild(tableHeader);
+    tableHeader.setAttribute('colspan', '5');
+    tableHeader.textContent = 'Coffee Menu';
+}
+
+function footer() {
+    const coffeeTable = document.querySelector('#table-footer');
+    let tableFooter = document.createElement('td');
+    coffeeTable.appendChild(tableFooter);
+    tableFooter.setAttribute('colspan', '5');
+    tableFooter.textContent = 'It\'s not procrastinating it\'s procaffeinating!';
+}
+
+header();
+footer();
+
+
 
 // populating <body> tag in HTML with data from my array coffeeList
 let menuTemplate = document.querySelector('#coffee-menu');
@@ -26,9 +39,5 @@ for(let j = 0; j < coffeeList.length; j++) {
     let clone = document.importNode(menuTemplate.content, true);
     tb.appendChild(clone);
 }
-/*
-const tableRow = document.querySelector('#menu-info');
-const tableData = document.createElement('td');
-tableRow.appendChild(tableData);
-tableData.id = 'td-' + j.toString(); */
+
 
