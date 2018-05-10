@@ -3,9 +3,9 @@ class Cookie {
     constructor(location, cookieType, stock, cost, price) {
         this.location = location;
         this.cookieType = cookieType;
-        this.stock = stock;
-        this.cost = cost;
-        this.price = price;
+        this.stock = parseInt(stock);
+        this.cost = parseInt(cost);
+        this.price = parseInt(price);
         this.profit = price - cost;
     }
 

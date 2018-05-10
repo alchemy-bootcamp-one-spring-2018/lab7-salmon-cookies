@@ -1,5 +1,8 @@
 function render(array, tabId, rowId) {
     let tab = document.getElementById(tabId);
+    while(tab.firstChild) {
+        tab.removeChild(tab.firstChild);
+    }
     let row = document.createElement('tr');
     row.id = rowId;
     for(let i in array) {
@@ -7,5 +10,8 @@ function render(array, tabId, rowId) {
         data.innerHTML = array[i];
         row.appendChild(data);
     }
-    tab.appendChild(row);
+    // It doesn't work if I don't have this!??!
+    setTimeout(() => {   
+        tab.appendChild(row);
+    }, 100);
 }
