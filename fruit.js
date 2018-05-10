@@ -61,22 +61,39 @@
 // Constructor function → create fruit instances → array of objects → loop through array
 
 //constructor fruit function
-function Fruit (name, color, standLocation, price) {
-    this.name;
-    this.color;
-    this.standLocation = standLocation;
-    this.price;
+class Fruit {
+    constructor(name, color, standLocation, price) {
+        this.name = name;
+        this.color = color;
+        this.standLocation = standLocation;
+        this.price = price;
+    }
+
+    createTableHead() {
+        console.log('sell');
+        const table = document.querySelector('#fruit-table');
+        const thead = document.createElement('thead');
+        console.log(table, thead);
+
+        const tr = document.createElement('tr');
+        const th = document.createElement('th');
+        th.textContent = apple.name;
+        table.appendChild(thead);
+        thead.appendChild(tr);
+        tr.appendChild(th);
+    }
 }
 
 //instances of fruit object
 var apple = new Fruit('Granny Smith', 'green', 'Portland', 3);
+console.log(apple.createTableHead());
 var orange = new Fruit('Navel', 'orange', 'Eugene', 2);
 var avocado = new Fruit('Hass', 'green', 'Corvallis', 4);
 
 //array of fruits
 //loop through fruits --> in app.js
-var fruits = ['apple', 'orange', 'avocado']; //use for creating tr in table body?
-console.log(fruits.length);
+var fruits = [apple, orange, avocado]; //use for creating tr in table body?
+console.log(fruits);
 
 //function to push to thead
 // function createLi(fruits) {
@@ -119,7 +136,7 @@ console.log(fruits.length);
 //     table.appendChild(thead);
 // }
 
-function createTableHead(Fruit) {
+function createTablesHead(Fruit) {
     //make a js reference to the parent element (table > thead > tr > table cell)
     const table = document.getElementById('fruit-table');
     const thead = document.createElement('thead');
