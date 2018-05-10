@@ -39,8 +39,7 @@ let multnomahVillage = new Cookiestand('Multnomah Village', '', 312, 223, 123, 4
 let mainStreet = new Cookiestand('Main Street', '', 432, 312, 654, 452, 312, 662, 432, 312, 452);
 let lombardStreet = new Cookiestand('Lombard Street', '', 234, 123, 221, 231, 113, 112, 654, 291, 128);
 
-// place all location objects into and array
-
-//*****NOTE TO TA****** I can't figure out why I can't get this linter error to disappear
+// place all location objects into an array
 
 allLocations = [yamhillAve, couchStreet, grandAve, multnomahVillage, mainStreet, lombardStreet];
+//*****NOTE TO TA****** I can't figure out why I can't get this linter error to disappear
