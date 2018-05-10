@@ -21,6 +21,7 @@ function generateFooter(){
 }
 
 generateFooter();
+//gets sum of columns
 var sum = 0;
 function addColumn(){
     var additionArray = [];
@@ -31,11 +32,12 @@ function addColumn(){
     sum = additionArray.reduce(function(acc, value){
         return acc + value;
     }, 0);
-    console.log(sum);
 }
 
 addColumn();
+console.log(sum);
 
+//appends rows onto my table
 for(var i = 0; i < cookieData.length; i++){
 
     var newTr = cookieData[i].createTEle('td');

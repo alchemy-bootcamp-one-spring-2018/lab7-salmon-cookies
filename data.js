@@ -20,18 +20,20 @@ class Batch {
     }
 
     createThead(){
+        //use in conjunction with .createEle(th)
         const head = document.createElement('thead');
         return head;
     }
 
     createTfoot(){
+        //use in conjunction with .createEle(th)
         const foot = document.createElement('tfoot');
         return foot;
     }
 
     createTEle(element){
         const row = document.createElement('tr');
-        
+        //each creates the argument and appends to a row
         const firstData = document.createElement(element);
         firstData.textContent = this.batch;
         row.appendChild(firstData);
