@@ -1,6 +1,6 @@
 'use strict';
 /* globals Store */
-/* exported sell, profit, render */
+/* exported sell, profit, render, totals */
 
 class Store {
 
@@ -35,26 +35,10 @@ class Store {
         cell0.textContent = this.location;
         cell1.textContent = this.salmonType;
         cell2.textContent = this.size;
-        cell3.textContent = this.cost;
-        cell4.textContent = this.price;
+        cell3.textContent = '$' + this.cost;
+        cell4.textContent = '$' + this.price;
         cell5.textContent = this.inventory;
 
         return tbody;
     }
 }
-
-var arrHeaders = [
-    'Location',
-    'Fish Origin',
-    'Size (S/M/L)',
-    'Cost',
-    'Price',
-    'Inventory'
-];
-
-var arrStores = new Array();
-arrStores[0] = new Store('Portland', 'Pacific', 'M', 20, 10.00, 20.00);
-arrStores[1] = new Store('New York', 'Atlantic', 'M', 10, 12.00, 24.00);
-arrStores[2] = new Store('Los Angeles', 'Pacific', 'S', 30, 8.00, 18.00);
-arrStores[3] = new Store('San Francisco', 'Pacific', 'L', 6, 15.00, 30.00);
-arrStores[4] = new Store('Miami', 'Atlantic', 'S', 13, 4.00, 9.00);

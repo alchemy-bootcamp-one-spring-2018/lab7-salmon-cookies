@@ -1,6 +1,42 @@
 'use strict';
 /* globals Store */
 
+var arrHeaders = [
+    'Location',
+    'Fish Origin',
+    'Size (S/M/L)',
+    'Cost',
+    'Price',
+    'Inventory'
+];
+
+var arrStores = new Array();
+arrStores[0] = new Store('Portland', 'Pacific', 'M', 20, 10.00, 20.00);
+arrStores[1] = new Store('New York', 'Atlantic', 'M', 10, 12.00, 24.00);
+arrStores[2] = new Store('Los Angeles', 'Pacific', 'S', 30, 8.00, 18.00);
+arrStores[3] = new Store('San Francisco', 'Pacific', 'L', 6, 15.00, 30.00);
+arrStores[4] = new Store('Miami', 'Atlantic', 'S', 13, 4.00, 9.00);
+
+// Sums costTotal, priceTotal, inventoryTotal for later use
+var costTotal = 0;
+var priceTotal = 0;
+var inventoryTotal = 0;
+
+    for(var i = 0; i < arrStores.length; i++) {
+        costTotal += arrStores[i].cost;
+        priceTotal += arrStores[i].price;
+        inventoryTotal += arrStores[i].inventory;
+    }
+
+var arrFooters = [
+    ,
+    ,
+    'Total:',
+    '$' + costTotal,
+    '$' + priceTotal,
+    inventoryTotal
+];
+
 /*
 Function create and appends 'thead', inserts one row there.
 Remaining 'for' loop creates variables[i], inserts cells[i]
@@ -38,16 +74,16 @@ function createBody() {
 // Function finds table, creates 'tfoot', 'tr', 'td' and appends
 function createFooter() {
     var table = document.getElementsByTagName('table')[0];
-
     var tfoot = document.createElement('tfoot');
-    var tr = document.createElement('tr');
-    var td = document.createElement('td');
-    var tdText = document.createTextNode('Test Footer');
-
-    td.appendChild(tdText);
-    tr.appendChild(td);
-    tfoot.appendChild(tr);
     table.appendChild(tfoot);
+
+    var row = tfoot.insertRow(0);
+    var cell = [];
+    for(var i = 0; i < arrFooters.length; i++) {
+        cell[i];
+        cell[i] = row.insertCell(i);
+        cell[i].textContent = arrFooters[i];
+    }
 }
 
 createHeader();
