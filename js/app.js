@@ -1,5 +1,5 @@
 'use strict';
-/* exported Batch, batch1, batch2, batch3, batch4, batch5, tableArray, createTableData, createRows*/
+/* exported */
 
 class Batch {
     constructor(batch, salmonType, size, inventory, cost, batchPrice, unitPrice) {
@@ -48,7 +48,6 @@ for(let i = 0; i < batchArray.length; i++) {
     var child = document.createElement('tr');
     parent.appendChild(child);
     child.id = i;
-    console.log('this works');
     insertBatch(i);
     insertSalmonType (i);
     insertSize (i);
@@ -106,3 +105,22 @@ function insertUnitPrice(i) {
     grandChild.textContent = batchArray[i].unitPrice;
     child.appendChild(grandChild);
 }
+
+const headArray = ['batch', 'salmonType', 'size', 'inventory', 'cost', 'batchPrice', 'unitPrice'];
+
+for(let i = 0; i < headArray.length; i++) {
+    var getHead = document.getElementById('t-head');
+    var gotHead = document.createElement('th');
+    getHead.appendChild(gotHead);
+    gotHead.id = i;
+}
+
+document.getElementById('0').innerHTML = 'Batch';
+document.getElementById('6').innerHTML = 'Salmon Type';
+document.getElementById('1').innerHTML = 'Size';
+document.getElementById('2').innerHTML = 'Inventory';
+document.getElementById('3').innerHTML = 'Cost';
+document.getElementById('4').innerHTML = 'Batch Price';
+document.getElementById('5').innerHTML = 'Unit Price';
+
+console.log('this works');
