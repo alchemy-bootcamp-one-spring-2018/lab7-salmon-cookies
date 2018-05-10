@@ -29,72 +29,50 @@ class Batch {
         return foot;
     }
 
-    createTh(){
+    createTEle(element){
         const row = document.createElement('tr');
+        
+        // for(var i = 0; i < cookieData.length; i++){
+        //     const data = document.createElement(element);
+        //     data.textContent = constructor[i];
+        //     row.appendChild(data);
+        //     console.log(cookieData[0])
+        // }
 
-        const firstData = document.createElement('th');
+        const firstData = document.createElement(element);
         firstData.textContent = this.batch;
         row.appendChild(firstData);
 
-        const secondData = document.createElement('th');
+        const secondData = document.createElement(element);
         secondData.textContent = this.salmonType;
         row.appendChild(secondData);
 
-        const thirdData = document.createElement('th');
+        const thirdData = document.createElement(element);
         thirdData.textContent = this.inventory;
         row.appendChild(thirdData);
 
-        const fourthData = document.createElement('th');
+        const fourthData = document.createElement(element);
         fourthData.textContent = this.price;
         row.appendChild(fourthData);
 
-        const fifthData = document.createElement('th');
+        const fifthData = document.createElement(element);
         fifthData.textContent = this.cost;
         row.appendChild(fifthData);
 
-        const sixthData = document.createElement('th');
+        const sixthData = document.createElement(element);
         sixthData.textContent = this.cookieSize;
         row.appendChild(sixthData);
 
         return row;
     }
 
-    createTr(){
-        const row = document.createElement('tr');
-
-        const firstData = document.createElement('td');
-        firstData.textContent = this.batch;
-        row.appendChild(firstData);
-
-        const secondData = document.createElement('td');
-        secondData.textContent = this.salmonType;
-        row.appendChild(secondData);
-
-        const thirdData = document.createElement('td');
-        thirdData.textContent = this.inventory;
-        row.appendChild(thirdData);
-
-        const fourthData = document.createElement('td');
-        fourthData.textContent = this.price;
-        row.appendChild(fourthData);
-
-        const fifthData = document.createElement('td');
-        fifthData.textContent = this.cost;
-        row.appendChild(fifthData);
-
-        const sixthData = document.createElement('td');
-        sixthData.textContent = this.cookieSize;
-        row.appendChild(sixthData);
-
-        return row;
-    }
 }
 const headerInfo = [
     head = new Batch('Batch', 'Type', 'Inventory', 'Price', 'Cost', 'Size')
 ];
 
 const footerInfo = [
-    foot = new Batch('here', 'is', 'a', 'footer', 'to', 'test')
+    foot = new Batch('', '', 'a', '', '', '')
 ];
 
 const cookieData = [
