@@ -1,5 +1,6 @@
+// class object
 class Batch {
-
+// constructor method
     constructor(batch, salmonType, size, inventory, cost, retailPrice) {
         this.batch = batch;
         this.salmonType = salmonType;
@@ -45,9 +46,13 @@ class Batch {
     }
 }
 
+// create new instance of Batch and call attributes
 let batch1 = new Batch(1, 'Atlantic', 'medium', 30, '$15', '$30');
-
 batch1.createTable();
+
+let batch2 = new Batch(2, 'Pacific', 'large', 15, '$20', '$45');
+batch2.createTable();
+
 
 
 
