@@ -1,4 +1,4 @@
-/* import globals */
+/* globals cookieData*/
 // console.log(firstBatch.sold(2));
 // console.log(firstBatch.profitMargin());
 
@@ -21,15 +21,20 @@ function generateFooter(){
 }
 
 generateFooter();
+var sum = 0;
+function addColumn(){
+    var additionArray = [];
+    for(var i = 0; i < cookieData.length; i++){
+        let sumOfColumns = cookieData[i].inventory;
+        additionArray.push(sumOfColumns);
+        //console.log(cookieData[i].inventory);
+    }
+    sum = additionArray.reduce(function(acc, value){
+        return acc + value;
+    }, 0);
+}
 
-// function addColumn(x){
-//     for(var i = 0; i < cookieData.length; i++){
-//         let sumOfColumns = cookieData[i].x;
-//         return sumOfColumns;
-//     }
-// }
-
-// console.log(addColumn())
+addColumn();
 
 for(var i = 0; i < cookieData.length; i++){
 
