@@ -1,9 +1,27 @@
+body {
+    background-image: url('./images/cafe.jpg');
+    background-size: cover;
+}
+
 h1 {
     display: flex;
     justify-content: center;
+    font-size: 80px;
+    color: lightgoldenrodyellow;
 }
 
 div {
     display: flex;
     justify-content: center;
+}
+
+#coffee-table {
+    background-color: black;
+    color: lightgoldenrodyellow;
+    font-size: 25px;
+}
+
+#footer {
+    text-align: center;
+
 }

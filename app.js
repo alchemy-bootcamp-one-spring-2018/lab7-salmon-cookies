@@ -13,15 +13,14 @@ function header() {
 function footer() {
     const coffeeTable = document.querySelector('#table-footer');
     let tableFooter = document.createElement('td');
+    tableFooter.id = 'footer';
     coffeeTable.appendChild(tableFooter);
     tableFooter.setAttribute('colspan', '5');
-    tableFooter.textContent = 'It\'s not procrastinating it\'s procaffeinating!';
+    tableFooter.textContent = 'Don\'t procrastinate - procaffeinate!';
 }
 
 header();
 footer();
-
-
 
 // populating <body> tag in HTML with data from my array coffeeList
 let menuTemplate = document.querySelector('#coffee-menu');
@@ -30,7 +29,7 @@ let tb = document.querySelector('tbody');
 
 for(let j = 0; j < coffeeList.length; j++) {
   
-    td[0].textContent = coffeeList[j].name;
+    td[0].textContent = coffeeList[j].name.toUpperCase();
     td[1].textContent = coffeeList[j].temp;
     td[2].textContent = coffeeList[j].size;
     td[3].textContent = coffeeList[j].price;
