@@ -2,8 +2,8 @@
 
 class Batch {
 
-    constructor(batch, salmonType, inventory, price, cost, cookieSize) {
-        this.batch = batch;
+    constructor(number, salmonType, inventory, price, cost, cookieSize) {
+        this.number = number;
         this.salmonType = salmonType;
         this.inventory = inventory;
         this.price = price;
@@ -32,13 +32,6 @@ class Batch {
     createTEle(element){
         const row = document.createElement('tr');
         
-        // for(var i = 0; i < 1; i++){
-        //     const data = document.createElement(element);
-        //     data.textContent = constructor[i];
-        //     row.appendChild(data);
-        //     console.log(cookieData[i]);
-        // }
-
         const firstData = document.createElement(element);
         firstData.textContent = this.batch;
         row.appendChild(firstData);
@@ -67,18 +60,19 @@ class Batch {
     }
 
 }
+
 const headerInfo = [
     head = new Batch('Batch', 'Type', 'Inventory', 'Price', 'Cost', 'Size')
 ];
 
 const footerInfo = [
-    foot = new Batch('', '', 'total', 'being', 'implemented', '')
+    foot = new Batch('', '', '', 'being', 'implemented', '')
 ];
 
-const cookieData = [
-    firstBatch = new Batch('1', 'Pacific', 24, 20.00, 7.50, 'Small'),
-    secondBatch = new Batch('2', 'Atlantic', 10, 25.00, 8.50, 'Medium'),
-    thirdBatch = new Batch('3', 'Pacific', 7, 30.00, 9.25, 'Large'),
-    fourthBatch = new Batch('4', 'Pacific', 45, 35.00, 10.00, 'Small'),
-    fifthBatch = new Batch('5', 'Atlantic', 56, 2, 4, 'Medium')
-];
+
+let firstBatch = new Batch('1', 'Pacific', 24, 20.00, 7.50, 'Small');
+let secondBatch = new Batch('2', 'Atlantic', 10, 25.00, 8.50, 'Medium');
+let thirdBatch = new Batch('3', 'Pacific', 7, 30.00, 9.25, 'Large');
+let fourthBatch = new Batch('4', 'Pacific', 45, 35.00, 10.00, 'Small');
+
+const cookieData = [firstBatch, secondBatch, thirdBatch, fourthBatch];
