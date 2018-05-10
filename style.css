@@ -13,18 +13,18 @@ table {
     background-color: bisque   
 }
 th {
-    padding: 5px 10px 10px 10px;
-    border-bottom: 2px solid blue;
-    border-top: 2px solid blue;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    padding: 20px 20px 20px 20px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    /* border-left: 2px solid black; */
+    /* border-right: 2px solid black; */
     text-align: left;
     
     }
 
 tr, td {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
     padding: 5px 10px 10px 10px;
     border-bottom: 2px solid blue;
     border-top: 2px solid blue;

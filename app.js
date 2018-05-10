@@ -12,47 +12,53 @@ class Batch {
     createTable() {
         // create coolie table to append in html
         var newTable = document.getElementById('cookie-table');
-
+        
+        // append child (td) to (table row)
+        var tableRow = document.createElement('tr');
+        newTable.appendChild(tableRow);
+    
         // append batch to row
         var tableRowBatch = document.createElement('td');
-        newTable.appendChild(tableRowBatch);
+        tableRow.appendChild(tableRowBatch);
         tableRowBatch.textContent = this.batch;
         
         // append salmonType to row
         var tableRowType = document.createElement('td');
-        newTable.appendChild(tableRowType);
+        tableRow.appendChild(tableRowType);
         tableRowType.textContent = this.salmonType;
     
         // append size to row
         var tableRowSize = document.createElement('td');
-        newTable.appendChild(tableRowSize);
+        tableRow.appendChild(tableRowSize);
         tableRowSize.textContent = this.size;
 
         // append inventory to row
         var tableRowInventory = document.createElement('td');
-        newTable.appendChild(tableRowInventory);
+        tableRow.appendChild(tableRowInventory);
         tableRowInventory.textContent = this.inventory;
 
         // append cost to row
         var tableRowCost = document.createElement('td');
-        newTable.appendChild(tableRowCost);
+        tableRow.appendChild(tableRowCost);
         tableRowCost.textContent = this.cost;
 
         // append retailPrice to row
         var tableRowRetailPrice = document.createElement('td');
-        newTable.appendChild(tableRowRetailPrice);
+        tableRow.appendChild(tableRowRetailPrice);
         tableRowRetailPrice.textContent = this.retailPrice;
 
     }
 }
 
 // create new instance of Batch and call attributes
-let batch1 = new Batch(1, 'Atlantic', 'medium', 30, '$15', '$30');
+let batch1 = new Batch(1, 'Atlantic', 'Medium', 30, '$15', '$30');
 batch1.createTable();
 
-let batch2 = new Batch(2, 'Pacific', 'large', 15, '$20', '$45');
+let batch2 = new Batch(2, 'Pacific', 'Large', 15, '$20', '$45');
 batch2.createTable();
 
+let batch3 = new Batch(3, 'Pacific', 'Small', 40, '$30', '$50');
+batch3.createTable();
 
 
 
