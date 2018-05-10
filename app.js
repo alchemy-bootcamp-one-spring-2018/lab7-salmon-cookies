@@ -21,9 +21,10 @@ function generateFooter(){
 }
 
 generateFooter();
+
 //gets sum of columns
 var sum = 0;
-function addColumn(){
+function addInventory(){
     var additionArray = [];
     for(var i = 0; i < cookieData.length; i++){
         additionArray.push(cookieData[i].inventory);
@@ -33,7 +34,7 @@ function addColumn(){
     }, 0);
 }
 
-addColumn();
+addInventory();
 console.log(sum);
 
 //appends rows onto my table
