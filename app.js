@@ -26,7 +26,7 @@ function insertHeader() {
     for(var i = 0; i < headerArray.length; i++){
         var child = document.createElement('th');
         parent.appendChild(child);
-        child.textContent = headerArray[i];
+        child.textContent = headerArray[i].toUpperCase();
     }
 
 }

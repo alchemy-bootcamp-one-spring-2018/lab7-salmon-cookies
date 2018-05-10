@@ -8,7 +8,9 @@ table {
 
 table, tr, td  {
     border: 1px solid darksalmon;
+    padding: 15px;
 }
  thead {
      color: lightgray;
+     border-bottom: double;
  }
