@@ -66,7 +66,7 @@ const headerInfo = [
 ];
 
 const footerInfo = [
-    foot = new Batch('', '', '', 'being', 'implemented', '')
+    foot = new Batch('', '', 'totals', 'totals', 'totals', '')
 ];
 
 

@@ -1,4 +1,6 @@
 /* globals cookieData*/
+// console.log(firstBatch.sold(2));
+// console.log(firstBatch.profitMargin());
 
 const enderElement = document.getElementById('main-table');
 const rowElement = document.getElementById('table-body');
@@ -19,6 +21,20 @@ function generateFooter(){
 }
 
 generateFooter();
+var sum = 0;
+function addColumn(){
+    var additionArray = [];
+    for(var i = 0; i < cookieData.length; i++){
+        let sumOfColumns = cookieData[i].inventory;
+        additionArray.push(sumOfColumns);
+    }
+    sum = additionArray.reduce(function(acc, value){
+        return acc + value;
+    }, 0);
+    console.log(sum);
+}
+
+addColumn();
 
 for(var i = 0; i < cookieData.length; i++){
 
