@@ -5,15 +5,16 @@
 function createHeader() {
     var table = document.getElementsByTagName('table')[0];
 
-    var thead = document.createElement('thead');
-    var tr = document.createElement('tr');
-    var th = document.createElement('th');
-    var thText = document.createTextNode('Test Header');
-
-    th.appendChild(thText);
-    tr.appendChild(th)
-    thead.appendChild(tr);
-    table.appendChild(thead);
+        var thead = document.createElement('thead');
+        var tr = document.createElement('tr');
+        var th = document.createElement('th');
+        var thText = document.createTextNode('Test Header');
+        
+        th.appendChild(thText);
+        tr.appendChild(th)
+        thead.appendChild(tr);
+        table.appendChild(thead);
+        
 }
 
 function createBody() {
