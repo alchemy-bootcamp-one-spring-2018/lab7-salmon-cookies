@@ -22,11 +22,6 @@ class Cookie {
     profit() {
         return this.price - this.cost;
     }
-
-    createTr() {
-        var tr = document.createElement('tr');
-        return tr;
-    }
 }
 
 var salmonCookie = new Cookie('Salmon', 'sandwich', 'savory', 5, 1.5, 24);

@@ -62,28 +62,20 @@ function insertInventory(i) {
     child.textContent = cookieArray[i].inventory;
 }
 
-function insertHeader(i) {
-    var parent = document.getElementById('table-head');
-    var child = document.createElement('th');
+function insertFooter() {
+    var parent = document.getElementById('table-footer');
+    var child = document.createElement('tr');
     parent.appendChild(child);
-    child.textContent = cookieArray[i].name;
+    child.id = 'foot-row';
+    footerData();
 }
 
+function footerData() {
+    var parent = document.getElementById('foot-row');
+    for(var i = 0; i < 6; i++) {
+        var child = document.createElement('td');
+        parent.appendChild(child);
+    }
+}
 
-// function cookieHeader() {
-//     var table = document.getElementById('cookie-table');
-    
-//     var thead = document.createElement('thead');
-//     var tr = document.createElement('tr');
-//     //var th = document.createElement('th');
-
-//     for(var i = 0; i < 5; i++) {
-//         var th = document.createElement('th');
-//         tr.appendChild(th);
-//         thead.appendChild(tr);
-//         table.appendChild(thead);
-//     }
-//     //th.textContent = 'Type';
-// }
-// cookieHeader();
-
+insertFooter();
