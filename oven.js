@@ -1,8 +1,9 @@
-/* exported Cookie chocolateCookie oatmealCookie bananaCookie */
+/* exported Cookie chocolateCookie oatmealCookie bananaCookie cookieArray */
 'use strict';
 
 class Cookie {
-    constructor(type, taste, price, cost, inventory) {
+    constructor(name, type, taste, price, cost, inventory) {
+        this.name = name;
         this.type = type;
         this.taste = taste;
         this.price = price;
@@ -21,13 +22,20 @@ class Cookie {
     profit() {
         return this.price - this.cost;
     }
+
+    createTr() {
+        var tr = document.createElement('tr');
+        return tr;
+    }
 }
 
-var salmonCookie = new Cookie('sandwich', 'savory', 5, 1.5, 24);
+var salmonCookie = new Cookie('Salmon', 'sandwich', 'savory', 5, 1.5, 24);
 console.log(salmonCookie);
 
-var chocolateCookie = new Cookie('crispy', 'semi-sweet', 4, .75, 24);
+var chocolateCookie = new Cookie('Chocolate', 'crispy', 'semi-sweet', 4, .75, 24);
 
-var oatmealCookie = new Cookie('chewy', 'sweet', 3.5, .5, 24);
+var oatmealCookie = new Cookie('Oatmeal', 'chewy', 'sweet', 3.5, .5, 24);
 
-var bananaCookie = new Cookie('ice cream', 'sweet', 6, 2, 16);
+var bananaCookie = new Cookie('Banana', 'ice cream', 'sweet', 6, 2, 16);
+
+var cookieArray = [salmonCookie, chocolateCookie, oatmealCookie, bananaCookie];

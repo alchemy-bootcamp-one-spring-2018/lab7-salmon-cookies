@@ -1,3 +1,11 @@
 table {
-    border: 2px solid salmon;
+    border-collapse: collapse;
+    width: 50%;
+    background-color: darkslategray;
+    color: rgb(253, 212, 218);
+
+}
+
+table, tr, td  {
+    border: 1px solid darksalmon;
 }
