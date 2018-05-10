@@ -70,17 +70,24 @@ class Fruit {
     }
 
     createTableHead() {
-        console.log('sell');
         const table = document.querySelector('#fruit-table');
         const thead = document.createElement('thead');
         console.log(table, thead);
 
+        
         const tr = document.createElement('tr');
-        const th = document.createElement('th');
-        th.textContent = apple.name;
-        table.appendChild(thead);
-        thead.appendChild(tr);
-        tr.appendChild(th);
+        var headerRow = ['', 'Name', 'Color', 'Stand Location', 'Price'];
+        for(var i = 0; i < 5; i++) {
+            let th = document.createElement('th');
+            th.textContent = headerRow[i];
+            table.appendChild(thead);
+            thead.appendChild(tr);
+            tr.appendChild(th);
+        }
+    }
+
+    renderFruit() {
+        
     }
 }
 
@@ -161,6 +168,20 @@ function createTablesHead(Fruit) {
     //append child to the parent thead > table
     table.appendChild(thead);
 }
+/* test createTableHead function */
+// createTableHead() {
+//     console.log('sell');
+//     const table = document.querySelector('#fruit-table');
+//     const thead = document.createElement('thead');
+//     console.log(table, thead);
+
+//     const tr = document.createElement('tr');
+//     const th = document.createElement('th');
+//     th.textContent = apple.name;
+//     table.appendChild(thead);
+//     thead.appendChild(tr);
+//     tr.appendChild(th);
+// }
 
 //function to push to tbody
 //function to push to tfooter
