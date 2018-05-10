@@ -8,9 +8,10 @@
     <title>Lab 7: Salmon Cookies</title>
 </head>
 <body>
-    <h1>SALMON COOKIES</h1>
     <div id="main">
+        <h1>SALMON COOKIES</h1>
         <h2>mmmmmmmmm fishy</h2>
+        <hr>
     </div>
     <div>
         <table>
@@ -19,14 +20,13 @@
                     <th>Batch</th>
                     <th>Type</th>
                     <th>Size</th>
+                    <th>Inventory</th>
+                    <th>Cost</th>
+                    <th>Price</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Pacific</td>
-                    <td>M</td>
-                </tr>
+                <!-- put <tr> and cell content in with JS here -->
             </tbody>
             <tfoot>
                 <tr>
@@ -36,6 +36,13 @@
                 </tr>
             </tfoot>
         </table>
+
+        <template id="batch-row">
+            <tr>
+                <td class="record"></td>
+                <td></td>
+            </tr>
+        </template>
     </div>
 
 

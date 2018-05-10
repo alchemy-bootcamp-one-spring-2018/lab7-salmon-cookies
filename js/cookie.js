@@ -1,5 +1,4 @@
 'use strict';
-/* exported  */
 
 class Batch {
     constructor(batch, salmonType, size, inventory, cost, price){
@@ -22,25 +21,9 @@ class Batch {
 let batch1 = new Batch(1,"pacific", "M", 20, 10.00, 20.00);
 console.log('batch1' , batch1);
 
-// var fruits = [
-//     {
-//         img: 'images/apple.png',
-//         name: 'apple',
-//         origin: 'usa',
-//         color: 'red',
-//         season: 'fall',
-        
-//         createLi: function() {
-//             var li = document.createElement('li');
-//             li.textContent = 'origin: ' + this.origin + ' peak season: ' + this.season;
-//             li.style.color = this.color;
-//             return li;
-//         },
-//         fruitImage: function () {
-//             var img = document.createElement('img');
-//             img.setAttribute('src' , this.img);
-//             return img;
-//         }    
-//     }
-  
-// ];
+let batch2 = new Batch(2, "Alaskan", "S", 40, 20.00, 40.00);
+console.log('batch2', batch2);
+
+var allTheCookies = [
+    batch1, batch2
+],
