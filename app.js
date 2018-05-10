@@ -1,3 +1,5 @@
+var displayArray = [];
+
 class Batch {
 
     constructor(batch, flavor, ounces, retailPrice, cookiesSold) {
@@ -21,5 +23,17 @@ function addRow(cookie) {
     const tr = document.createElement('tr');
     tr.textContent = cookie;
     tBody.appendChild(tr);
+    
 }
+
+//test to get something to page--needs to get broken into separate tds
 addRow(batch1.batch + batch1.flavor + batch1.ounces);
+
+// function addTableData(cookie) {
+//     const tBody = document.getElementById('tbody');
+//     const td = document.createElement('td');
+//     td.textContent = cookie;
+//     tBody.appendChild(td);
+
+// }
+//addTableData(batch2.batch);
