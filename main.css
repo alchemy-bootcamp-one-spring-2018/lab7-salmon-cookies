@@ -9,3 +9,6 @@ table {
 table, tr, td  {
     border: 1px solid darksalmon;
 }
+ thead {
+     color: lightgray;
+ }

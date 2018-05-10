@@ -3,7 +3,7 @@
 'use strict';
 
 function insertRow() {
-    var parent = document.getElementById('cookie-table');
+    var parent = document.getElementById('table-body');
     for(var i = 0; i < cookieArray.length; i++) {
         var child = document.createElement('tr');
         child.id = 'row-' + i;
@@ -60,6 +60,13 @@ function insertInventory(i) {
     var child = document.createElement('td');
     parent.appendChild(child);
     child.textContent = cookieArray[i].inventory;
+}
+
+function insertHeader(i) {
+    var parent = document.getElementById('table-head');
+    var child = document.createElement('th');
+    parent.appendChild(child);
+    child.textContent = cookieArray[i].name;
 }
 
 
