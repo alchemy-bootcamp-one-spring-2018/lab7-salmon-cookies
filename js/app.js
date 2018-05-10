@@ -53,6 +53,7 @@ for(let i = 0; i < batchArray.length; i++) {
     insertSalmonType (i);
     insertSize (i);
     insertInventory (i);
+    insertCost (i);
     insertBatchPrice (i);
     insertUnitPrice (i);
 }
@@ -82,6 +83,13 @@ function insertInventory(i) {
     child = document.getElementById(i);
     var grandChild = document.createElement('td');
     grandChild.textContent = batchArray[i].inventory;
+    child.appendChild(grandChild);
+}
+
+function insertCost(i) {
+    child = document.getElementById(i);
+    var grandChild = document.createElement('td');
+    grandChild.textContent = batchArray[i].cost;
     child.appendChild(grandChild);
 }
 
