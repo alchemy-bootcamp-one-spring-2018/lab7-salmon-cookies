@@ -1,20 +1,18 @@
 'use strict';
-/* globals Store */
+/* globals Store arrHeaders */
 
 
 function createHeader() {
     var table = document.getElementsByTagName('table')[0];
+    var thead = document.createElement('thead');
+    table.appendChild(thead);
+    //document.getElementsByTagName('thead')[0].textContent = 'This is some text';
 
-        var thead = document.createElement('thead');
-        var tr = document.createElement('tr');
-        var th = document.createElement('th');
-        var thText = document.createTextNode('Test Header');
-        
-        th.appendChild(thText);
-        tr.appendChild(th)
-        thead.appendChild(tr);
-        table.appendChild(thead);
-        
+    for(var i = 0; i < arrHeaders.length; i++) {
+    
+    }
+
+    //var tHeadInput = document.getElementsByTagName('thead');
 }
 
 function createBody() {
@@ -25,22 +23,7 @@ function createBody() {
     for(var i = 0; i < arrStores.length; i++) {
         arrStores[i].render();
     }
-
 }
-
-/* function createBody() {
-    for(var i = 0; i < arrStores.length; i++) {
-        var first = document.querySelector(#fruit-list UL tag);
-
-        var fruitName = fruits[i].createLi();
-        first.appendChild(fruitName);
-        first.style.color = fruits[3].color;
-
-        var fruitImage = (fruits[i].createImg());
-        first.appendChild(fruitImage);
-    }
-} */
-
 
 function createFooter() {
     var table = document.getElementsByTagName('table')[0];

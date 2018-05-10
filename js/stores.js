@@ -1,6 +1,6 @@
 'use strict';
-/* globals Store */
-/* exported sell, profit, render */
+/* globals Store arrHeaders */
+/* exported sell, profit, render, getTitles */
 
 class Store {
 
@@ -35,16 +35,45 @@ class Store {
         cell1.textContent = this.location;
         cell2.textContent = this.salmonType;
         cell3.textContent = this.size;
-        cell5.textContent = this.cost;
-        cell6.textContent = this.price;
-        cell4.textContent = this.inventory;
+        cell4.textContent = this.cost;
+        cell5.textContent = this.price;
+        cell6.textContent = this.inventory;
 
         return tbody;
+    }
 
+    getTitles() {
+        var thead = document.getElementsByTagName('thead')[0];
+
+        var row = thead.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+
+        cell1.textContent = this.location;
+        cell2.textContent = this.salmonType;
+        cell3.textContent = this.size;
+        cell4.textContent = this.cost;
+        cell5.textContent = this.price;
+        cell6.textContent = this.inventory;
+
+        return thead;
     }
 }
 
-var arrStores = new Array()
+var arrHeaders = [
+    'Location',
+    'Fish Origin',
+    'Size (S/M/L)',
+    'Cost',
+    'Price',
+    'Inventory'
+];
+
+var arrStores = new Array();
 arrStores[0] = new Store('Portland', 'Pacific', 'M', 20, 10.00, 20.00);
 arrStores[1] = new Store('New York', 'Atlantic', 'M', 10, 12.00, 24.00);
 arrStores[2] = new Store('Los Angeles', 'Pacific', 'S', 30, 8.00, 18.00);
