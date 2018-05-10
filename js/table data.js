@@ -27,10 +27,7 @@ class Batch {
 }
 
 let batch1 = new Batch (1, 'Pacific', 'M', 8, 10, 20, 2.5);
-console.log ('batch1', batch1);
-
-let batch2 = new Batch (2, 'Atlantic', 'L', 4, 10, 20, 5);
-console.log ('batch2', batch2);
+console.log ('batch1'
 
 let batch3 = new Batch (3, 'Atlantic', 'S', 12, 10, 20, 2.0);
 console.log ('batch3', batch3);
@@ -43,5 +40,4 @@ console.log ('batch5', batch5);
 
 var tableArray = [batch1, batch2, batch3, batch4, batch5];
 
-const createTableData = document.createElement('tr');
 
