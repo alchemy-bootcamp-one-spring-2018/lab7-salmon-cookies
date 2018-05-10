@@ -42,13 +42,31 @@ console.log ('batch4', batch4);
 const batchArray = [batch1, batch2, batch3, batch4];
 console.log(batchArray, 'batchArray');
 
-function createRows() {
 
-    var getHead = document.querySelector('#cookie-table');
-    var tHead = document.createElement('thead');
+for(let i = 0; i < batchArray.length; i++) {
+    var parent = document.getElementById('t-body');
+    var child = document.createElement('tr');
+    parent.appendChild(child);
+    child.id = i;
     console.log('this works');
-    for(let i = 0; i < 6; i++) {
-        getHead.appendChild(tHead);
-    }
+    insertBatch(i);
+
 }
 
+function insertBatch (i) {
+    child = document.getElementById(i);
+    var grandChild = document.createElement('td');
+    grandChild.textContent = batchArray[i].batch;
+    child.appendChild(grandChild);
+}
+
+
+
+// var getData = document.querySelector('#table-data');
+// getData.appendChild(tableData);
+// console.log('this works');
+// for(let i = 0; i < batchArray.length; i++) {
+//     var tableData = document.createElement('td');
+//     tableData.textContent = batchArray[i].batch;
+
+// }
