@@ -26,8 +26,7 @@ var sum = 0;
 function addColumn(){
     var additionArray = [];
     for(var i = 0; i < cookieData.length; i++){
-        let sumOfColumns = cookieData[i].inventory;
-        additionArray.push(sumOfColumns);
+        additionArray.push(cookieData[i].inventory);
     }
     sum = additionArray.reduce(function(acc, value){
         return acc + value;

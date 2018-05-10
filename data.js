@@ -35,7 +35,7 @@ class Batch {
         const row = document.createElement('tr');
         //each creates the argument and appends to a row
         const firstData = document.createElement(element);
-        firstData.textContent = this.batch;
+        firstData.textContent = this.number;
         row.appendChild(firstData);
 
         const secondData = document.createElement(element);
