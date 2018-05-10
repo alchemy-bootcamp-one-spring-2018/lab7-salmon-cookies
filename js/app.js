@@ -22,13 +22,13 @@ var costTotal = 0;
 var priceTotal = 0;
 var inventoryTotal = 0;
 
-    for(var i = 0; i < arrStores.length; i++) {
-        costTotal += arrStores[i].cost;
-        priceTotal += arrStores[i].price;
-        inventoryTotal += arrStores[i].inventory;
-    }
+for(var i = 0; i < arrStores.length; i++) {
+    costTotal += arrStores[i].cost;
+    priceTotal += arrStores[i].price;
+    inventoryTotal += arrStores[i].inventory;
+}
 
-var arrFooters = [ , , 'Total:', '$' + costTotal, '$' + priceTotal, inventoryTotal];
+var arrFooters = [null, null, 'Total:', '$' + costTotal, '$' + priceTotal, inventoryTotal];
 
 
 /*
@@ -41,9 +41,7 @@ function createHeader() {
     var thead = document.createElement('thead');
     table.appendChild(thead);
     
-    var thead = document.getElementsByTagName('thead')[0];
     var row = thead.insertRow(0);
-    
     var cell = [];
     for(var i = 0; i < arrHeaders.length; i++) {
         cell[i];
