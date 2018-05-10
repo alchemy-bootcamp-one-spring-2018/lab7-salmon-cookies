@@ -50,23 +50,51 @@ for(let i = 0; i < batchArray.length; i++) {
     child.id = i;
     console.log('this works');
     insertBatch(i);
-
+    insertSalmonType (i);
+    insertSize (i);
+    insertInventory (i);
+    insertBatchPrice (i);
+    insertUnitPrice (i);
 }
 
-function insertBatch (i) {
+function insertBatch(i) {
     child = document.getElementById(i);
     var grandChild = document.createElement('td');
     grandChild.textContent = batchArray[i].batch;
     child.appendChild(grandChild);
 }
 
+function insertSalmonType(i) {
+    child = document.getElementById(i);
+    var grandChild = document.createElement('td');
+    grandChild.textContent = batchArray[i].salmonType;
+    child.appendChild(grandChild);
+}
 
+function insertSize(i) {
+    child = document.getElementById(i);
+    var grandChild = document.createElement('td');
+    grandChild.textContent = batchArray[i].size;
+    child.appendChild(grandChild);
+}
 
-// var getData = document.querySelector('#table-data');
-// getData.appendChild(tableData);
-// console.log('this works');
-// for(let i = 0; i < batchArray.length; i++) {
-//     var tableData = document.createElement('td');
-//     tableData.textContent = batchArray[i].batch;
+function insertInventory(i) {
+    child = document.getElementById(i);
+    var grandChild = document.createElement('td');
+    grandChild.textContent = batchArray[i].inventory;
+    child.appendChild(grandChild);
+}
 
-// }
+function insertBatchPrice(i) {
+    child = document.getElementById(i);
+    var grandChild = document.createElement('td');
+    grandChild.textContent = batchArray[i].batchPrice;
+    child.appendChild(grandChild);
+}
+
+function insertUnitPrice(i) {
+    child = document.getElementById(i);
+    var grandChild = document.createElement('td');
+    grandChild.textContent = batchArray[i].unitPrice;
+    child.appendChild(grandChild);
+}
