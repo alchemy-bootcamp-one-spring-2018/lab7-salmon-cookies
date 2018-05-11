@@ -1,0 +1,19 @@
+/* table {
+    align-content: center;
+} */
+
+table {
+    border-collapse: collapse
+}
+
+tfoot td {
+    border-top: 2px solid;
+}
+
+table {
+    justify-content: flex-start;
+}
+
+th, td {
+    border: 1px solid;
+}
