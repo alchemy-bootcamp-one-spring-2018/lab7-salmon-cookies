@@ -3,8 +3,11 @@ body {
     background-size: 80em;
     
 }
-td {
+#t-body {
     background-color: rgba(87, 184, 23, 0.822);
+    border-style: groove;
+}
+td{
     border-style: groove;
 }
 
@@ -15,9 +18,11 @@ table{
     border-color: cornsilk;
     font-size: 30px;
     color: cornsilk;
+    background-color: rgb(126, 125, 125);
 }
-thead{
-    background-color: blue;
+#t-head{
+    background-color: rgba(232, 235, 72, 0.945);
+    color: rgb(240, 146, 6)
 }
 
 div {
@@ -29,6 +34,4 @@ div {
     display: block;
     border-style: groove;
     border-color: cornsilk;
-
-    
 }

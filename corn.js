@@ -87,3 +87,10 @@ const headerArray = [
     'Inventory',
     'Price'
 ];
+const footerArray = [
+    'Questions for us?',
+    'Missing something?', 
+    'Call us at:',
+    '1-800-COR-NNNN',
+    'Thank you!'
+];

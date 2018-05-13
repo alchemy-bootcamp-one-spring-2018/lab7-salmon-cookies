@@ -18,4 +18,16 @@ for(let i in cornArray){
     cornArray[i].renderBody();
 }
 
+function makeFooter(){
+    var parent = document.getElementById('t-foot');
+    var child = document.createElement('tr');
+    parent.appendChild(child);
+    for(let i in footerArray){
+        let footerData = document.createElement('td');
+        child.appendChild(footerData);
+        footerData.textContent = footerArray[i];
+    }
+
+}
 makeHeader();
+makeFooter();
