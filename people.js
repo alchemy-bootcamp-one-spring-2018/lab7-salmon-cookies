@@ -68,3 +68,10 @@ const cornArray = [
     redCorn,
     blackCorn
 ];
+const headerArray = [
+    'Name',
+    'Flavor',
+    'Availability',
+    'Inventory',
+    'Price'
+];
