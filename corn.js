@@ -21,10 +21,7 @@ class Corn {
         }
         table.appendChild(row);
     }
-    
-
 }
-
 
 const popCorn = new Corn (
     'Popcorn:',
