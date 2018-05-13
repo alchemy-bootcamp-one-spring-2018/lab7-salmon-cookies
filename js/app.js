@@ -1,9 +1,9 @@
+'use strict';
+
 /* globals allLocations */
 
-console.log('app.js is loading');
-
 var t = document.querySelector('#header-row');
-var td = t.content.querySelectorAll("td");
+var td = t.content.querySelectorAll('td');
 
 // Function to create table header
 
@@ -20,7 +20,7 @@ var createHeaderRow = function(){
     td[9].textContent = allLocations[0].hours[8];
  
     // Clone the new row and insert it into the table
-    var tb = document.querySelector("thead");
+    var tb = document.querySelector('thead');
     var clone = document.importNode(t.content, true);
     tb.appendChild(clone);
   
@@ -55,7 +55,7 @@ let allLocationsSales1000 = function(){
 // Function to create table footer
 
 t = document.querySelector('#footer-row');
-td = t.content.querySelectorAll("td");
+td = t.content.querySelectorAll('td');
 
 var createFooterRow = function(){
     td[0].textContent = 'TOTALS';
@@ -70,7 +70,7 @@ var createFooterRow = function(){
     td[9].textContent = salesByLocation1800;
 
     // Clone the new row and insert it into the table
-    var tf = document.querySelector("tfoot");
+    var tf = document.querySelector('tfoot');
     var clone2 = document.importNode(t.content, true);
     tf.appendChild(clone2);
 };
@@ -78,7 +78,7 @@ var createFooterRow = function(){
 // Function to create table rows for body
 
 t = document.querySelector('#body-rows');
-td = t.content.querySelectorAll("td");
+td = t.content.querySelectorAll('td');
 
 var createLocationRows = function(){
     for(var i = 0; i < allLocations.length; i++) {
@@ -94,26 +94,19 @@ var createLocationRows = function(){
         td[9].textContent = allLocations[i].salesPerHour1800;
 
         // Clone the new row and insert it into the table
-        var tb = document.querySelector("tbody");
+        var tb = document.querySelector('tbody');
         var clone = document.importNode(t.content, true);
         tb.appendChild(clone);
 
     }
 };
 
-
-console.log('this is the second item in the hours array - should be 11:00: ' + allLocations[0].location[1]);
-
-console.log('all location sales value (10:00) is: ' + allLocations[1].salesPerHour1000);
-
 // Function calls (to all above) to render complete table
-
 
 createHeaderRow();
 createLocationRows();
 allLocationsSales1000();
 createFooterRow();
 
-console.log(salesByLocation1000);
 
 

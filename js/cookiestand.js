@@ -1,6 +1,6 @@
-console.log('cookiestand.js is loading');
+'use strict';
 
-/* globals allLocations */
+/* exported allLocations */
 
 /* 
 object constructor to build array of cookie stand locations
@@ -41,5 +41,4 @@ let lombardStreet = new Cookiestand('Lombard Street', '', 234, 123, 221, 231, 11
 
 // place all location objects into an array
 
-allLocations = [yamhillAve, couchStreet, grandAve, multnomahVillage, mainStreet, lombardStreet];
-//*****NOTE TO TA****** I can't figure out why I can't get this linter error to disappear
+let allLocations = [yamhillAve, couchStreet, grandAve, multnomahVillage, mainStreet, lombardStreet];
