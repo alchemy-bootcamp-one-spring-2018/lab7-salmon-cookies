@@ -1,4 +1,4 @@
-/* exported cornArray headerArray */
+/* exported cornArray footerArray headerArray */
 /* globals  */
 'use strict';
 class Corn {
@@ -89,7 +89,7 @@ const headerArray = [
 ];
 const footerArray = [
     'Questions for us?',
-    'Missing something?', 
+    'Missing something?',
     'Call us at:',
     '1-800-COR-NNNN',
     'Thank you!'

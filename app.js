@@ -1,4 +1,4 @@
-/*globals cornArray headerArray*/
+/*globals cornArray headerArray footerArray*/
 /* exported cornType */
 'use scrict';
 
