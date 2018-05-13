@@ -1,6 +1,6 @@
+/* exported cornArray headerArray */
+/* globals  */
 'use strict';
-
-
 class Corn {
     constructor(name, flavor, available, inventory, cost) {
         this.name = name;
@@ -9,11 +9,25 @@ class Corn {
         this.inventory = inventory;
         this.cost = cost;
     }
+    
+    renderBody(){
+        let array = [this.name, this.flavor, this.available, this.inventory, this.cost];
+        let table = document.getElementById('t-body');
+        let row = document.createElement('tr');
+        for(let i in array){
+            let data = document.createElement('td');
+            data.textContent = array[i];
+            row.appendChild(data);
+        }
+        table.appendChild(row);
+    }
+    
 
 }
 
+
 const popCorn = new Corn (
-    'Popcorn',
+    'Popcorn:',
     'Buttery',
     true,
     100,
@@ -21,7 +35,7 @@ const popCorn = new Corn (
 );
 
 const yellowCorn = new Corn (
-    'Yellow Corn',
+    'Yellow Corn:',
     'Sweet',
     true,
     130,
@@ -29,7 +43,7 @@ const yellowCorn = new Corn (
 );
 
 const blueCorn = new Corn (
-    'Blue Corn',
+    'Blue Corn:',
     'Savory',
     true,
     60,
@@ -37,7 +51,7 @@ const blueCorn = new Corn (
 );
 
 const whiteCorn = new Corn (
-    'White Corn',
+    'White Corn:',
     'Sweet',
     false,
     0,
@@ -45,7 +59,7 @@ const whiteCorn = new Corn (
 );
 
 const redCorn = new Corn (
-    'Red Corn',
+    'Red Corn:',
     'Spicy',
     true,
     50,
@@ -53,7 +67,7 @@ const redCorn = new Corn (
 );
 
 const blackCorn = new Corn (
-    'Black Corn',
+    'Black Corn:',
     'Salty-Sweet',
     false,
     85,
@@ -68,6 +82,7 @@ const cornArray = [
     redCorn,
     blackCorn
 ];
+
 const headerArray = [
     'Name',
     'Flavor',
