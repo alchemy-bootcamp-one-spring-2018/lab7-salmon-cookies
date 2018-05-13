@@ -1,0 +1,2 @@
+/*globals cornArray */
+'use scrict';
