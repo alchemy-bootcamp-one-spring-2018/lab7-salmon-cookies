@@ -1,0 +1,17 @@
+
+
+table {
+    width: 800px;
+    text-align: center;
+    border: 2px solid ;
+}
+
+table td {
+    font-size: 18px;
+    background: rgb(171, 161, 161);
+}
+
+table thead {
+    font-size: 20px;
+    font-weight: bold;
+}
