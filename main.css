@@ -1,0 +1,45 @@
+body {
+    background-image: url('./images/cafe.jpg');
+    background-size: cover;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    color: lightgoldenrodyellow;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+#coffee-table {
+    background-color: black;
+    opacity: 0.70;
+    color: lightgoldenrodyellow;
+    font-size: 25px;
+    border-collapse: collapse;
+}
+
+thead {
+    border: solid;
+}
+
+th {
+    padding: 5px;
+}
+
+tbody {
+    text-transform: capitalize;
+}
+td {
+    border: solid;
+    padding: 5px;
+}
+
+#footer {
+    text-align: center;
+
+}
