@@ -1,0 +1,32 @@
+table {
+    background: honeydew;
+    border: 1px solid black;
+    border-collapse: collapse;
+    opacity: 0.8;
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+td {
+    padding: 10px;
+    border: 1px solid skyblue;
+}
+th {
+    border-bottom: 3px solid blue;
+    padding: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    
+}
+
+#background-image {
+    position: fixed;
+    width: 100%;
+    top: -400px;
+    z-index: -1;
+}
